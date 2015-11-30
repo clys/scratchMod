@@ -1,4 +1,4 @@
-刮奖用组件，使用了html5的画布(canvas) 在不支持画布的浏览器中自动使用div的形式（div的形式没有擦除效果，在“开始回调”中的第一个参数声明了是canvas还是div）
+刮奖用组件，使用了html5的画布(canvas) 在不支持画布的浏览器中自动使用div的形式（div的形式没有擦除效果，在“开始回调”中的第一个参数声明了是canvas还是div）:v:
 
 ```
  buildScratchMod:function(){
