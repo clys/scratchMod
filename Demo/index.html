@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/docs.min.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scratchMod.js"></script>
+    <script type="text/javascript" src="static/js/dome.js"></script>
+</head>
+<body>
+
+<div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+        <h1>ScratchMod</h1>
+
+        <p>刮奖组件</p>
+    </div>
+</div>
+
+<div class="container-fluid" style="margin-left: 25px;margin-right: 25px">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header"><a class="anchorjs-link " style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>使用方法</h1>
+
+            依赖 jquery<br>
+            组件需要一个容器元素，组件将在容器中生成刮奖元素，自动兼容不支持画布的浏览器，调用时返刮奖元素<br>
+
+            <h2>初始化:</h2>
+            <div class="highlight"><pre>
+                  <code> var canvas = ScratchMod({
+                      'container': ,//目标容器
+                      'bgImgSrc': ,//背景图
+                      'imgSrc': ,//蒙版图
+                      'penImgSrc': ,//擦笔图
+                      'color': ,//蒙版颜色（有imgSrc的情况下该属性无效）
+                      'width': ,//宽度
+                      'height': ,//高度
+                      'eraseRadius':,//擦除笔的半径(有penImgSrc的情况下无效)
+                      'sampleStep': ,//获取擦除百分百时的精度（数字越大精度越小）
+                      'sampleCD': ,//获取擦除百分百的时间间隔
+                      'sampleCallback': ,//获取擦除百分百的回调函数（返回true后不再回调）,回调的第一个入参为擦除百分百
+                      'startCallback': //开始刮的回调(只回调一次,回调的第一个入参为生成的元素类型 canvas或div)
+                      })</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header"><a class="anchorjs-link " style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>演示</h1>
+            <div class="highlight">
+                <span>startCallback:</span><span id="show_data_1" style="word-break: break-all; word-wrap:break-word;"></span><br>
+                <span>sampleCallback:</span><span id="show_data_2" style="word-break: break-all; word-wrap:break-word;"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="scratch_mod_container" class="col-md-12 text-center center-block" style="width:300px;height: 300px;float: none">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
