@@ -195,25 +195,27 @@ function ScratchMod(pars) {
     }
 
     var img = new Image(), bgImg = new Image(), penImg = new Image();
-    bgImg.addEventListener('load', function () {
+    bgImg.onload = function () {
         bgImgLoading = false;
         if (!bgImgLoading && !imgLoading && !penImgLoading) {
             init();
         }
-    });
-    img.addEventListener('load', function () {
+    };
+    img.onload = function () {
         imgLoading = false;
         if (!bgImgLoading && !imgLoading && !penImgLoading) {
             init();
         }
-    });
+    };
 
-    penImg.addEventListener('load', function () {
+    penImg.onload=function () {
         penImgLoading = false;
         if (!bgImgLoading && !imgLoading && !penImgLoading) {
             init();
         }
-    });
+    };
+
+
 
     var bgImgLoading, imgLoading, penImgLoading;
 
